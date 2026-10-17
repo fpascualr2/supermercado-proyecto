@@ -1,0 +1,28 @@
+<div class="min-h-screen bg-gray-900 text-white flex flex-col">
+  <!-- Barra Superior -->
+  <header class="bg-gray-800 border-b border-gray-700 px-6 py-4 flex justify-between items-center shadow-md">
+    <div class="flex items-center space-x-3">
+      <span class="bg-amber-600 text-xs font-bold px-2.5 py-1 rounded-full uppercase">BODEGA</span>
+      <h1 class="text-xl font-bold text-amber-400 tracking-wide">Gestión de Inventario y Almacén</h1>
+    </div>
+    <div class="flex items-center gap-4">
+      <span class="text-sm text-gray-300">Hola, <strong class="text-white">{{ authService.currentUser()?.nombre }}</strong></span>
+      <button (click)="authService.logout()" class="px-4 py-2 bg-red-600 hover:bg-red-500 rounded-lg text-sm font-semibold transition duration-200 shadow">
+        Cerrar Sesión
+      </button>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="flex-1 p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg hover:border-amber-500 transition">
+      <h2 class="text-lg font-semibold text-amber-300 mb-2">Control de Productos y Stock</h2>
+      <p class="text-sm text-gray-400">Actualiza existencias, stock mínimo y códigos de artículos en almacén.</p>
+    </div>
+
+    <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg hover:border-amber-500 transition">
+      <h2 class="text-lg font-semibold text-amber-300 mb-2">Proveedores y Categorías</h2>
+      <p class="text-sm text-gray-400">Gestiona la clasificación de mercancías y el registro de proveedores asociados.</p>
+    </div>
+  </main>
+</div>
